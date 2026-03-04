@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Тест по HTML и CSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Экран ввода имени -->
+  <div id="welcome-screen">
+    <h2>Добро пожаловать в тест по HTML и CSS!</h2>
+    <p>Введите своё имя:</p>
+    <input type="text" id="username" placeholder="Ваше имя" maxlength="20" />
+    <button onclick="startTest()">Начать тест</button>
+  </div>
+
+  <!-- Тест -->
+  <div id="quiz-container" style="display: none;">
+    <h2 id="question-title">Вопрос 1</h2>
+    <div id="answers"></div>
+    <button id="next-btn" onclick="nextQuestion()" disabled>Далее</button>
+  </div>
+
+  <!-- Результат -->
+  <div id="result-screen" style="display: none;">
+    <h2>Результаты</h2>
+    <p id="user-result"></p>
+    <h3>Результаты других игроков:</h3>
+    <ul id="all-results"></ul>
+    <button onclick="restartQuiz()">Пройти ещё раз</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
